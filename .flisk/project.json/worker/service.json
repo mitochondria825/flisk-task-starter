@@ -1,0 +1,11 @@
+{
+  "name": "worker",
+  "build": {
+    "context": ".",
+    "dockerfile": "Dockerfile"
+  },
+  "dependsOn": [
+    "redis",
+    "db"
+  ]
+}

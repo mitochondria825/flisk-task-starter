@@ -1,0 +1,21 @@
+{
+  "name": "db",
+  "image": "postgres:15-alpine",
+  "ports": [
+    {
+      "port": 5432,
+      "public": false
+    }
+  ],
+  "environment": {
+    "POSTGRES_USER": "postgres",
+    "POSTGRES_PASSWORD": "postgres",
+    "POSTGRES_DB": "postgres"
+  },
+  "volumes": [
+    {
+      "name": "db-data",
+      "mountPath": "/var/lib/postgresql/data"
+    }
+  ]
+}

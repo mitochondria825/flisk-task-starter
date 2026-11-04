@@ -1,0 +1,21 @@
+{
+  "name": "result",
+  "build": {
+    "context": ".",
+    "dockerfile": "Dockerfile"
+  },
+  "ports": [
+    {
+      "port": 4000,
+      "public": true,
+      "domain": "result.localhost"
+    }
+  ],
+  "dependsOn": [
+    "db"
+  ],
+  "healthCheck": {
+    "path": "/",
+    "port": 4000
+  }
+}

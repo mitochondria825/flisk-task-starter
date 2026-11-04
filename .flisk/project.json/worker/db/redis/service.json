@@ -1,0 +1,10 @@
+{
+  "name": "redis",
+  "image": "redis:alpine",
+  "ports": [
+    {
+      "port": 6379,
+      "public": false
+    }
+  ]
+}

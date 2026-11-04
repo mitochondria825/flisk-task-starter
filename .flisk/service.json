@@ -1,0 +1,21 @@
+{
+  "name": "vote",
+  "build": {
+    "context": ".",
+    "dockerfile": "Dockerfile"
+  },
+  "ports": [
+    {
+      "port": 5000,
+      "public": true,
+      "domain": "vote.localhost"
+    }
+  ],
+  "dependsOn": [
+    "redis"
+  ],
+  "healthCheck": {
+    "path": "/",
+    "port": 5000
+  }
+}

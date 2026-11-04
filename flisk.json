@@ -1,0 +1,12 @@
+{
+  "$schema": "https://flisk.sh/schema/v1/project.json",
+  "name": "flisk-task-starter",
+  "version": "1.0.0",
+  "services": [
+    "vote",
+    "result",
+    "worker",
+    "db",
+    "redis"
+  ]
+}
