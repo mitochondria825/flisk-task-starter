@@ -8,26 +8,19 @@ Run the single command below to launch the entire multi-service stack:
 
 ```bash
 flisk up
+
+---
+
 Once running, access the vote client on http://vote.localhost and real-time tally on http://result.localhost.
-What was hard
+
+---
+
+## What was hard
 Migrating from the legacy docker-compose setup to individual Flisk service definitions introduced inter-service startup race conditions between the .NET worker, Redis queue, and Postgres backend.
 Resolving these lifecycle dependencies required declaring explicit dependency mappings across services so workers wait until backend ports are healthy.
 Additionally, running container landscapes on native Windows surfaces OS virtualization constraints that require WSL2 Ubuntu for container socket communication.
 ---
 
-### Step 3: Create `ROADMAP.md` (40 Points)
-
-The entire Product section (40 points) requires a file in the root directory named **`ROADMAP.md`**[cite: 1]. 
-It has very strict automated rules:
-* `## Vision` header with 20+ words[cite: 1]
-* `## Next 6 months` header containing an ICE table[cite: 1]
-* The table must have 3 rows scored with `Impact`, `Confidence`, `Ease`, and `ICE` (`Impact × Confidence × Ease`), sorted highest first[cite: 1]
-* Every row must have a column with a real `Number to watch` (a measurable metric)[cite: 1]
-* `## Not now` header with a clear reason of 8+ words[cite: 1]
-
-Click **Add file > Create new file**, name it **`ROADMAP.md`**, paste this exact content, and commit:
-
-```markdown
 # Product Roadmap
 
 ## Vision
